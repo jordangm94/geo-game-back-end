@@ -12,6 +12,10 @@ const db = require("./db");
 
 const games = require("./routes/games");
 
+app.get("/", (req, res) => {
+  res.send("Hello World")
+})
+
 function read(file) {
   return new Promise((resolve, reject) => {
     fs.readFile(
